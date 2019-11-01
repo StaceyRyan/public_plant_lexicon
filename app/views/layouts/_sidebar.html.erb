@@ -1,0 +1,21 @@
+<!-- sidebar -->
+<div class="sidebar">
+  <!--    <div id="map">-->
+  <!--      <h5> Where in the world are you? </h5>-->
+  <%#= image_tag("/assets/world_map.jpg",  alt: "map", class: "sidebar_image") %>
+  <!--      </div>-->
+  <!--    <br>-->
+  <h4> Weather </h4>
+  <div id="weather">
+    <% if current_user %>
+      <p>Today's temperature range is <%= weather[:min_t] if weather %> &#176 to
+        <%= weather[:max_t] if weather %> &#176 Celsius, with
+        <%= weather[:sky] if weather %>.</p>
+      <p> It is currently:
+        <%= weather[:temperature] if weather %>&#176 </p>
+    <% else %>
+      <p>Register or login to view your local weather.</p>
+      <%= image_tag("/assets/weather.jpg", alt: "weather", class: "sidebar_image") %>
+    <% end %>
+  </div>
+</div>

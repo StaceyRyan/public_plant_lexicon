@@ -1,0 +1,23 @@
+<div class="content">
+</div>
+<p>You are logged into the detailed view</p>
+<% if @permission.acess_level = 'Admin' %>
+  <button class="btn" id="edit"><%= link_to "Edit Plant", edit_path(@plants[:id]) %></button>
+<% end %>
+<% @plants.common_name %>
+  <div> <h3><%= @plants.common_name %><h4> <h4><%= @plants.scientific_name %></h4> </div>
+
+  <div><p> This plant grows best in the Australian growing zone <%= @plants.australian_growing_zone %>.</p>
+  <p>It is considered to be <%= @plants.classification %> but will suffer from predation by <%= @plants.predators %> </p>
+  </div>
+
+  <div><p> Toxicity: <%= @plants.toxicity %></p></div>
+
+  <div><p> Palatability: <%= @plants.toxicity %></p></div>
+
+  <div><h4> Further notes: <%= @plants.toxicity %></h4></div>
+
+<div id="images">
+  <div id="mature"><img class="content-image" src=<%= @plants.image_mature %>/></div>
+  <div id="seeds"><img class="content-image" src=<%= @plants.image_seedpod %>/></div>
+</div>
