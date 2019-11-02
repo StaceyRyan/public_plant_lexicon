@@ -13,7 +13,8 @@
 * Information about management of the plant in terms of cultivation and control where relevant.
 
 ##Using the app
-* The index page is open to the public. It includes only the common name and an image of the plant.
+* The homepage is: /users/index
+* The homepage is open to the public. It includes only the common name and an image of the plant.
 * Once logged in, a registered user can click on the plant name to access a page dedicated to displaying detailed information about the plant.
 * Any user can add a new plant.
 * Administration level users can edit the plant information.
